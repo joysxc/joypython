@@ -1,0 +1,78 @@
+github commands
+
+1. git --version tells github version installed on our machine
+2. when we first install git we have to configure the github
+     git config --global user.name "PSR" and press enter
+     git config --global user.email "email name" and press enter
+     global means this user
+3. git config --list
+   list the settings
+
+4. to view only one stting
+   git config --user.email
+
+5. Creating a repository
+   create a folder where you want to store your project files anc components.
+   give the folder location using cd command.
+   type git init
+
+6. Adding and Committing
+   create / copy files inside the repository
+   git add . --> adds the file to git repo
+   git add -a
+
+   git commit -m "mesaage" --> commits the file to git repo
+
+
+   Explanation - There is a two step process steps to add a file to git repo
+    Add - adds the file from local to staging area\
+    Commit - adds the file from the staging area to repo
+
+7. Viewing the logs
+   git log
+   to view log from a particular author
+   git log --author="name"
+
+8. to find the status of repo
+    git status
+
+9. to view the differnces if the file is modified
+   git diff
+   displays the differences between working copy and the repository
+   git diff --staged 
+   displays the differences between the working area and the staging area
+
+10. deleting the file
+    git -rm filename
+    git commit -m"message" --> to commit the delete in the repository
+
+11. directly committing to repository.( there is no need to add to push the changes to staging area)
+    git commit -am "message"
+    Not to use this command unless there are very small changes to file .
+    Shoud never be used if there are addition or deletion of files
+
+12. Undoing the changes from repository
+    In a situation where you have committed unwanted changes and want to bring back the last version to working copy
+    git checkout filename
+
+13. Undoing the changes from stage --> Unstaging the files
+	In a situation where you have staged the changes but then realized that you don't want to commit
+	git reset HEAD filename
+
+14. Renaming the files
+	git mv oldfilename newfilename
+
+15. Initializing the git repo and connecting it to git hub
+     Open a publiic repository in github without initilaizing it.
+     git init - initialize the local folder
+     Copy the url for the repositry
+     git remote add reponame url --> connect the repo in the github with the local git repo
+     git push -u reponame master --> will upload the files to github
+      git remote - find the reponame
+
+16. git clone url - to clone the repo ( only possible for main bracnh) 
+    Note - Init the local repo before you try a clone
+
+17. git clone -b first-thumb-start https://github.com/udacity/exoplanet-explorer ( example of cloning a branch first-thumb-start from the project url 
+	https://github.com/udacity/exoplanet-explorer)
+
